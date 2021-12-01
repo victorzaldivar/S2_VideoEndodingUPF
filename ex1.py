@@ -1,12 +1,12 @@
 import sys
 import os
 
-class ejercicio():
+class ejercicio1():
 
     def __init__(self, a):
         self.a = a
 
-    def showMVandMB(self,a):
+    def showMVandMB(a):
         while True:  # Creo un menú para interactuar con el user
             try:
                 result = int(

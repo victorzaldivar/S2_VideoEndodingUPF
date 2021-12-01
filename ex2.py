@@ -1,18 +1,11 @@
 import sys
 import os
 
-"""
-# era o una de las 3 opciones
-os.system("ffmpeg -i input.mp4 -i Sample.mp3 -map 0 -map 1:a -c:v copy -shortest output.mp4")
-os.system("ffmpeg -i input.mp4 -i Sample.mp3 -map 0 -map 1:a -c copy -shortest output.mp4")
-os.system("ffmpeg -i video.mp4 -i audio.m4a -c copy -map 0:v -map 1:a output.mp4")
-"""
-
-class ejercicio2 :
+class ejercicio2:
     def __init__(self, a):
         self.a = a
 
-    def exportAudio(self,a):
+    def exportAudio(a):
         while True:  # Creo un menú para interactuar con el user
             try:
                 result = int(
@@ -22,16 +15,16 @@ class ejercicio2 :
                 print("You must to enter a number.")
                 continue
             if result == 1:
-                os.system("ffmpeg -i input.mp4 -i Sample.mp3 -map 0 -map 1:a -c:v copy -shortest output.mp4")
-                ejercicio2.addAudioContainer(self, a)
-                continue
+                os.system("ffmpeg -i BBBvideo.mp4 -vn -ar 44100 -ac 2 -ab 192k -f mp3 Sample.mp3")
+                ejercicio2.addAudioContainer(a)
+                break
             elif result == 0:  # Para salir del programa
                 break
             elif result != 1:
                 print("You must enter '1' or '0'.")
                 continue
 
-    def addAudioContainer(self, a):
+    def addAudioContainer(a):
         while True:  # Creo un menú para interactuar con el user
             try:
                 result = int(
@@ -42,8 +35,8 @@ class ejercicio2 :
                 continue
             if result == 1:
                 os.system("ffmpeg -i BBBvideo.mp4 -i Sample.mp3 -map 0 -map 1:a -c copy -shortest output.mp4")
+                break
 
-                continue
             elif result == 0:  # Para salir del programa
                 break
             elif result != 1:

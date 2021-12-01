@@ -1,6 +1,6 @@
 import ex1
 import ex2
-import ex3
+import ex4
 
 header = """
     ################################
@@ -30,16 +30,16 @@ def show_menu():
             exit_game = True
 
         elif selected_option == "1":
-            ex1.ejercicio1.showMVandMB(self,a)
+            ex1.ejercicio1.showMVandMB(a)
 
         elif selected_option == "2":
-            ex2.ejercicio2.exportAudio(self,a)
+            ex2.ejercicio2.exportAudio(a)
 
         elif selected_option == "3":
             print("no solution:(")
 
         elif selected_option == "4":
-            ex3.ejercicio4.subtitles(self, a)
+            ex4.ejercicio4.subtitles(a)
 
 
         else:
