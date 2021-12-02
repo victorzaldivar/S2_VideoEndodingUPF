@@ -20,7 +20,7 @@ class ejercicio1():
                 os.system("ffmpeg -flags2 +export_mvs -i BBBvideo.mp4 -vf codecview=mv=pf+bf+bb motionvectors.mp4")
                 continue
             elif result == 2:
-                os.system("ffmpeg -i Big_Buck_Bunny_60fps_1080p.mp4 -vf scale=858:480 Big_Buck_Bunny_60fps_480p.mp4")
+                print("No solution implemented yet")
                 continue
             elif result == 0:  # Para salir del programa
                 break

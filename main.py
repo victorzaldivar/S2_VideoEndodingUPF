@@ -1,5 +1,6 @@
 import ex1
 import ex2
+import ex3
 import ex4
 
 header = """
@@ -12,7 +13,7 @@ main_options = """
 What do you want to do?
     1.- Show macroblocks and motion vectors
     2.- Add a new audio container 
-    3.- 
+    3.- See which broadcasting standard would fit to BBB video.
     4.- Add subtitles to BBB video
     0.- Exit"""
 
@@ -36,11 +37,10 @@ def show_menu():
             ex2.ejercicio2.exportAudio(a)
 
         elif selected_option == "3":
-            print("no solution:(")
+            ex3.ejercicio3.selectBroadcasting(a)
 
         elif selected_option == "4":
             ex4.ejercicio4.subtitles(a)
-
 
         else:
             print("This is not a valid option! Let's try again...")
